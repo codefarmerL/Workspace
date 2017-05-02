@@ -1,0 +1,1 @@
+cmd_/home/lzy/workspace/learndriver/hello/hello.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/lzy/workspace/learndriver/hello/hello.ko /home/lzy/workspace/learndriver/hello/hello.o /home/lzy/workspace/learndriver/hello/hello.mod.o
