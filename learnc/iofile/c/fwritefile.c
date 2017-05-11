@@ -3,9 +3,18 @@
 #define path "/home/lzy/workspace/learnc/iofile/testtxt/test3.txt"
 
 int main(){
-	char buf[10]="1234567890";
+	char c;
+	char buf[4096];
 	FILE *fp;
-	fp = fopen(path,"a");
-	fputs(buf,fp);
+	int i=0;
+	while((c=getc(stdin))!='\n'){
+		buf[i]=c;
+		i++;
+	}
+	fp = fopen(path,"w+");
+	if(fputs(buf,fp)==EOF)
+		printf("out error");
+	else
+		printf("write success\n");
 	return 0;
 }
