@@ -8,7 +8,7 @@ int main(){
 	char buf[64];
 	time(&t);
 	tmp = localtime(&t);
-	strftime(buf,64,"time and date: %r,%a %b %d %Y",tmp);
+	strftime(buf,64,"%c",tmp);
 	printf("%s\n",buf);
 	return 0;
 }
